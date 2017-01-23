@@ -20,14 +20,27 @@ class TouchCounterViewController: UIViewController {
         }
     }
     
-    private var count: Int = 0
-    private var seconds: TimeInterval = 0
+    private var count: Int64 = 0
+    private var seconds: Int64 = 0
     
     private var timer: Timer? = nil
     private var startTimeInterval: TimeInterval = 0
     
+    private var observer: NSObjectProtocol?
+    
+    deinit {
+        if observer != nil {
+            NotificationCenter.default.removeObserver(observer!)
+            observer = nil
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        observer = NotificationCenter.default.addObserver(forName: .UIApplicationDidEnterBackground, object: nil, queue: OperationQueue.main) { (note) in
+            self.pauseResumeButtonPressed(self.pauseResumeButton)
+        }
         
         isRunning = false
         
@@ -62,7 +75,7 @@ class TouchCounterViewController: UIViewController {
     private func updateUI() {
         counterLabel.text = "\(count)"
         
-        timerLabel.text = timeString(from: seconds)
+        timerLabel.text = timeString(from: TimeInterval(seconds))
     }
     
     private func update(timer: Timer) {
@@ -109,16 +122,53 @@ class TouchCounterViewController: UIViewController {
     
     private func saveIfNeeded() {
         if isRunning {
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let tmpCount = count
+            let tmpSeconds = seconds
             
-            let entry = TimeEntry(context: appDelegate.persistentContainer.viewContext)
-            entry.date = NSDate()
-            entry.count = Int64(count)
-            entry.duration = Int64(seconds)
+            let alertController = UIAlertController(title: NSLocalizedString("Save Entry?", comment: ""), message: nil, preferredStyle: .alert)
             
-            appDelegate.saveContext()
+            alertController.addTextField { (textField) in
+                textField.placeholder = NSLocalizedString("Name", comment: "")
+            }
+            
+            let saveAction = UIAlertAction(title: NSLocalizedString("Save", comment: ""), style: .default, handler: { (action) in
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                
+                let entry = TimeEntry(context: appDelegate.persistentContainer.viewContext)
+                entry.name = alertController.textFields?.first?.text
+                entry.date = NSDate()
+                entry.count = Int64(tmpCount)
+                entry.duration = Int64(tmpSeconds)
+                
+                appDelegate.saveContext()
+            })
+            
+            let cancelAction = UIAlertAction(title: NSLocalizedString("Discard", comment: ""), style: .default, handler: nil)
+            
+            alertController.addAction(saveAction)
+            alertController.addAction(cancelAction)
+            
+            present(alertController, animated: true, completion: nil)
         }
     }
     
+    
+    override func encodeRestorableState(with coder: NSCoder) {
+        coder.encode(count, forKey: "count")
+        coder.encode(seconds, forKey: "seconds")
+        
+        super.encodeRestorableState(with: coder)
+    }
+    
+    override func decodeRestorableState(with coder: NSCoder) {
+        count = coder.decodeInt64(forKey: "count")
+        seconds = coder.decodeInt64(forKey: "seconds")
+        
+        updateUI()
+        
+        super.decodeRestorableState(with: coder)
+    }
 }
+
+
 

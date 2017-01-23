@@ -13,7 +13,7 @@
         <!--Touch Counter View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TouchCounterViewController" customModule="TouchCount" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CounterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="TouchCounterViewController" customModule="TouchCount" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -46,7 +46,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="e7n-OS-Trq">
-                                <rect key="frame" x="16" y="617" width="343" height="30"/>
+                                <rect key="frame" x="16" y="568" width="343" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uiW-hB-n2D">
                                         <rect key="frame" x="0.0" y="0.0" width="167.5" height="30"/>
@@ -101,7 +101,7 @@
         <!--Time Table-->
         <scene sceneID="laK-yy-wtx">
             <objects>
-                <tableViewController title="Time Table" id="hpL-60-UHq" customClass="TimetableTableViewController" customModule="TouchCount" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TimetableViewController" title="Time Table" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hpL-60-UHq" customClass="TimetableTableViewController" customModule="TouchCount" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bUR-0B-KHQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,7 +146,7 @@
         <!--Time Table-->
         <scene sceneID="Tdk-9d-p42">
             <objects>
-                <navigationController id="kCm-BJ-FKq" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TimetableNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kCm-BJ-FKq" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Time Table" id="Rsb-Bl-i2R"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7hP-L0-NR7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -163,7 +163,7 @@
         <!--Counter-->
         <scene sceneID="MpQ-df-92a">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4tS-5U-7d5" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CounterNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4tS-5U-7d5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Counter" id="29K-aK-n0o"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KsB-WL-JLp">
@@ -186,9 +186,10 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Y0P-bf-ZYv">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hEk-CR-ScA" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hEk-CR-ScA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="j7s-8s-cIM">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>

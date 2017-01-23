@@ -4,8 +4,9 @@
         <attribute name="count" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="duration" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="TimeEntry" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="TimeEntry" positionX="-63" positionY="-18" width="128" height="105"/>
     </elements>
 </model>
