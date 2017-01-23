@@ -14,6 +14,8 @@
 		2E39CB371E3681A5004C109D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E39CB361E3681A5004C109D /* Assets.xcassets */; };
 		2E39CB3A1E3681A5004C109D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E39CB381E3681A5004C109D /* LaunchScreen.storyboard */; };
 		2E39CB451E3681A5004C109D /* TouchCountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E39CB441E3681A5004C109D /* TouchCountTests.swift */; };
+		2E8C26AF1E3699D600D371A8 /* TimetableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C26AE1E3699D600D371A8 /* TimetableTableViewController.swift */; };
+		2E8C26B31E36A00D00D371A8 /* ReusableView+NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8C26B21E36A00D00D371A8 /* ReusableView+NibLoadableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +29,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2E0625E01E36971500BA9769 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		2E0625E11E36971500BA9769 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		2E39CB291E3681A5004C109D /* TouchCount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchCount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E39CB2C1E3681A5004C109D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +41,9 @@
 		2E39CB401E3681A5004C109D /* TouchCountTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchCountTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E39CB441E3681A5004C109D /* TouchCountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchCountTests.swift; sourceTree = "<group>"; };
 		2E39CB461E3681A5004C109D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E8C26AE1E3699D600D371A8 /* TimetableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableTableViewController.swift; sourceTree = "<group>"; };
+		2E8C26B21E36A00D00D371A8 /* ReusableView+NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReusableView+NibLoadableView.swift"; sourceTree = "<group>"; };
+		2E8C26B71E36A4C000D371A8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				2E39CB2C1E3681A5004C109D /* AppDelegate.swift */,
+				2E8C26B21E36A00D00D371A8 /* ReusableView+NibLoadableView.swift */,
 				2E39CB2E1E3681A5004C109D /* TouchCounterViewController.swift */,
+				2E8C26AE1E3699D600D371A8 /* TimetableTableViewController.swift */,
 				2E39CB301E3681A5004C109D /* Main.storyboard */,
 				2E39CB361E3681A5004C109D /* Assets.xcassets */,
 				2E39CB381E3681A5004C109D /* LaunchScreen.storyboard */,
@@ -169,6 +175,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 2E39CB201E3681A4004C109D;
 			productRefGroup = 2E39CB2A1E3681A5004C109D /* Products */;
@@ -207,8 +214,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E39CB351E3681A5004C109D /* TouchCount.xcdatamodeld in Sources */,
+				2E8C26B31E36A00D00D371A8 /* ReusableView+NibLoadableView.swift in Sources */,
 				2E39CB2F1E3681A5004C109D /* TouchCounterViewController.swift in Sources */,
 				2E39CB2D1E3681A5004C109D /* AppDelegate.swift in Sources */,
+				2E8C26AF1E3699D600D371A8 /* TimetableTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +244,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2E39CB311E3681A5004C109D /* Base */,
-				2E0625E01E36971500BA9769 /* de */,
+				2E8C26B71E36A4C000D371A8 /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

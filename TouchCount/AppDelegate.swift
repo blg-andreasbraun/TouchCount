@@ -9,6 +9,15 @@
 import UIKit
 import CoreData
 
+func timeString(from time: TimeInterval) -> String {
+    
+    let hours = Int(time) / (60 * 60)
+    let minutes = (Int(time) / 60) % 60
+    let seconds = Int(time.truncatingRemainder(dividingBy: 60))
+    
+    return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

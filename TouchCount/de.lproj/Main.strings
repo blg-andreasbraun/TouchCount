@@ -1,15 +1,33 @@
 
+/* Class = "UITabBarItem"; title = "Counter"; ObjectID = "29K-aK-n0o"; */
+"29K-aK-n0o.title" = "Zähler";
+
+/* Class = "UINavigationItem"; title = "Time Table"; ObjectID = "ANw-BT-BKT"; */
+"ANw-BT-BKT.title" = "Einträge";
+
 /* Class = "UILabel"; text = "Timer"; ObjectID = "P8v-Kh-qTU"; */
 "P8v-Kh-qTU.text" = "Timer";
 
 /* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "QeD-DH-sk9"; */
 "QeD-DH-sk9.normalTitle" = "Zurücksetzen";
 
+/* Class = "UITabBarItem"; title = "Time Table"; ObjectID = "Rsb-Bl-i2R"; */
+"Rsb-Bl-i2R.title" = "Einträge";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "dqn-Qw-ZLm"; */
+"dqn-Qw-ZLm.text" = "Subtitle";
+
 /* Class = "UILabel"; text = "0"; ObjectID = "fBG-9P-nls"; */
 "fBG-9P-nls.text" = "0";
 
-/* Class = "UILabel"; text = "Label"; ObjectID = "j9x-Xo-303"; */
+/* Class = "UILabel"; text = "Title"; ObjectID = "gio-LR-aZc"; */
+"gio-LR-aZc.text" = "Title";
+
+/* Class = "UITableViewController"; title = "Time Table"; ObjectID = "hpL-60-UHq"; */
+"hpL-60-UHq.title" = "Einträge";
+
+/* Class = "UILabel"; text = "00:00:00"; ObjectID = "j9x-Xo-303"; */
 "j9x-Xo-303.text" = "00:00:00";
 
 /* Class = "UIButton"; normalTitle = "Resume"; ObjectID = "uiW-hB-n2D"; */
-"uiW-hB-n2D.normalTitle" = "Fortfahren";
+"uiW-hB-n2D.normalTitle" = "Fortsetzen";

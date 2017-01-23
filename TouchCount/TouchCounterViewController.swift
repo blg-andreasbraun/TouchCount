@@ -94,22 +94,30 @@ class TouchCounterViewController: UIViewController {
     }
     
     private func reset() {
+        saveIfNeeded()
+        
         count = 0
         seconds = 0
         
         timer?.invalidate()
         timer = nil
         
+        isRunning = false
+        
         updateUI()
     }
     
-    func timeString(from time: TimeInterval) -> String {
-        
-        let hours = Int(time) / (60 * 60)
-        let minutes = (Int(time) / 60) % 60
-        let seconds = Int(time.truncatingRemainder(dividingBy: 60))
-        
-        return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
+    private func saveIfNeeded() {
+        if isRunning {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            
+            let entry = TimeEntry(context: appDelegate.persistentContainer.viewContext)
+            entry.date = NSDate()
+            entry.count = Int64(count)
+            entry.duration = Int64(seconds)
+            
+            appDelegate.saveContext()
+        }
     }
     
 }
