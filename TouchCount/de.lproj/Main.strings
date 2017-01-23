@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "Timer"; ObjectID = "P8v-Kh-qTU"; */
+"P8v-Kh-qTU.text" = "Timer";
+
+/* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "QeD-DH-sk9"; */
+"QeD-DH-sk9.normalTitle" = "Zurücksetzen";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "fBG-9P-nls"; */
+"fBG-9P-nls.text" = "0";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "j9x-Xo-303"; */
+"j9x-Xo-303.text" = "00:00:00";
+
+/* Class = "UIButton"; normalTitle = "Resume"; ObjectID = "uiW-hB-n2D"; */
+"uiW-hB-n2D.normalTitle" = "Fortfahren";
